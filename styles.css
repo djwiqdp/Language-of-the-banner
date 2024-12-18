@@ -1,0 +1,933 @@
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    font-family: 'Black Han Sans', sans-serif;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(20, 1fr);
+    width: 100%;
+    height: 100%;
+}
+
+.grid div {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: background-image 0.3s ease, filter 0.5s ease;
+}
+
+
+.grid div[data-index="10"]:hover::after {
+    content: '좌우 빈 공간은 채워야 하는 강박이 있어요';
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #000;
+    color: #fff;
+    font-family: 'Black Han Sans', sans-serif;
+    font-size: 24px;
+    padding: 12.5px 25px;
+    border-radius: 0;
+    white-space: nowrap;
+    z-index: 10;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.grid div[data-index="10"]:hover::after {
+    opacity: 1;
+}
+
+.grid div[data-index="28"]:hover::after {
+    content: '좌우 빈 공간은 채워야 하는 강박이 있어요';
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #000;
+    color: #fff;
+    font-family: 'Black Han Sans', sans-serif;
+    font-size: 24px;
+    padding: 12.5px 25px;
+    border-radius: 0;
+    white-space: nowrap;
+    z-index: 10;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.grid div[data-index="28"]:hover::after {
+    opacity: 1;
+}
+
+/* 12번째 칸에 대한 말풍선 스타일 추가 */
+.grid div[data-index="12"]:hover::after {
+    content: '저는 느낌표 하나로 전투력이 상승해요.';
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #000;
+    color: #fff;
+    font-family: 'Black Han Sans', sans-serif;
+    font-size: 24px;
+    padding: 12.5px 25px;
+    border-radius: 0;
+    white-space: nowrap;
+    z-index: 10;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.grid div[data-index="12"]:hover::after {
+    opacity: 1;
+}
+
+/* 15번째 그리드 아이템에 대한 말풍선 스타일 추가 */
+.grid div[data-index="15"]:hover::after {
+    content: '저는 자주 질문하는 척 주장해요';
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #000;
+    color: #fff;
+    font-family: 'Black Han Sans', sans-serif;
+    font-size: 24px;
+    padding: 12.5px 25px;
+    border-radius: 0;
+    white-space: nowrap;
+    z-index: 10;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.grid div[data-index="15"]:hover::after {
+    opacity: 1;
+}
+
+/* 31번째 그리드 아이템에 대한 말풍선 스타일 추가 */
+.grid div[data-index="31"]:hover::after {
+    content: '가끔 귀찮을 땐 자세한 얘기는 전화로...';
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #000;
+    color: #fff;
+    font-family: 'Black Han Sans', sans-serif;
+    font-size: 24px;
+    padding: 12.5px 25px;
+    border-radius: 0;
+    white-space: nowrap;
+    z-index: 10;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.grid div[data-index="31"]:hover::after {
+    opacity: 1;
+}
+
+.grid div[data-index="38"]:hover::after {
+    content: '저는 자주 질문하는 척 주장해요';
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #000;
+    color: #fff;
+    font-family: 'Black Han Sans', sans-serif;
+    font-size: 24px;
+    padding: 12.5px 25px;
+    border-radius: 0;
+    white-space: nowrap;
+    z-index: 10;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.grid div[data-index="38"]:hover::after {
+    opacity: 1;
+}
+.grid div[data-index="45"]:hover::after {
+    content: '저는 자주 질문하는 척 주장해요';
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #000;
+    color: #fff;
+    font-family: 'Black Han Sans', sans-serif;
+    font-size: 24px;
+    padding: 12.5px 25px;
+    border-radius: 0;
+    white-space: nowrap;
+    z-index: 10;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.grid div[data-index="45"]:hover::after {
+    opacity: 1;
+}
+
+.grid div[data-index="41"]:hover::after {
+    content: '제게 담기는 모두가 세상 선량한 얼굴이랍니다.';
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #000;
+    color: #fff;
+    font-family: 'Black Han Sans', sans-serif;
+    font-size: 24px;
+    padding: 12.5px 25px;
+    border-radius: 0;
+    white-space: nowrap;
+    z-index: 10;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.grid div[data-index="41"]:hover::after {
+    opacity: 1;
+}
+
+.grid div[data-index="49"]:hover::after {
+    content: '가끔 귀찮을 땐 자세한 얘기는 전화로...';
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #000;
+    color: #fff;
+    font-family: 'Black Han Sans', sans-serif;
+    font-size: 24px;
+    padding: 12.5px 25px;
+    border-radius: 0;
+    white-space: nowrap;
+    z-index: 10;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.grid div[data-index="49"]:hover::after {
+    opacity: 1;
+}
+
+.grid div[data-index="50"]:hover::after {
+    content: '저는 자주 질문하는 척 주장해요';
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #000;
+    color: #fff;
+    font-family: 'Black Han Sans', sans-serif;
+    font-size: 24px;
+    padding: 12.5px 25px;
+    border-radius: 0;
+    white-space: nowrap;
+    z-index: 10;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.grid div[data-index="50"]:hover::after {
+    opacity: 1;
+}
+
+.grid div[data-index="52"]:hover::after {
+    content: '가끔 귀찮을 땐 자세한 얘기는 전화로...';
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #000;
+    color: #fff;
+    font-family: 'Black Han Sans', sans-serif;
+    font-size: 24px;
+    padding: 12.5px 25px;
+    border-radius: 0;
+    white-space: nowrap;
+    z-index: 10;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.grid div[data-index="52"]:hover::after {
+    opacity: 1;
+}
+
+.grid div[data-index="53"]:hover::after {
+    content: '저는 느낌표 하나로 전투력이 상승해요.';
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #000;
+    color: #fff;
+    font-family: 'Black Han Sans', sans-serif;
+    font-size: 24px;
+    padding: 12.5px 25px;
+    border-radius: 0;
+    white-space: nowrap;
+    z-index: 10;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+.grid div[data-index="53"]:hover::after {
+    opacity: 1;
+}
+
+.grid div[data-index="54"]:hover::after {
+    content: '좌우 빈 공간은 채워야 하는 강박이 있어요';
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #000;
+    color: #fff;
+    font-family: 'Black Han Sans', sans-serif;
+    font-size: 24px;
+    padding: 12.5px 25px;
+    border-radius: 0;
+    white-space: nowrap;
+    z-index: 10;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+.grid div[data-index="54"]:hover::after {
+    opacity: 1;
+}
+
+.grid div[data-index="59"]:hover::after {
+    content: '저는 자주 질문하는 척 주장해요';
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #000;
+    color: #fff;
+    font-family: 'Black Han Sans', sans-serif;
+    font-size: 24px;
+    padding: 12.5px 25px;
+    border-radius: 0;
+    white-space: nowrap;
+    z-index: 10;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+.grid div[data-index="59"]:hover::after {
+    opacity: 1;
+}
+
+.grid div[data-index="64"]:hover::after {
+    content: '제게 담기는 모두가 세상 선량한 얼굴이랍니다.';
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #000;
+    color: #fff;
+    font-family: 'Black Han Sans', sans-serif;
+    font-size: 24px;
+    padding: 12.5px 25px;
+    border-radius: 0;
+    white-space: nowrap;
+    z-index: 10;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+.grid div[data-index="64"]:hover::after {
+    opacity: 1;
+}
+
+.grid div[data-index="65"]:hover::after {
+    content: '제게 담기는 모두가 세상 선량한 얼굴이랍니다.';
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #000;
+    color: #fff;
+    font-family: 'Black Han Sans', sans-serif;
+    font-size: 24px;
+    padding: 12.5px 25px;
+    border-radius: 0;
+    white-space: nowrap;
+    z-index: 10;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+.grid div[data-index="65"]:hover::after {
+    opacity: 1;
+}
+
+.grid div[data-index="69"]:hover::after {
+    content: '저는 자주 질문하는 척 주장해요';
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #000;
+    color: #fff;
+    font-family: 'Black Han Sans', sans-serif;
+    font-size: 24px;
+    padding: 12.5px 25px;
+    border-radius: 0;
+    white-space: nowrap;
+    z-index: 10;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+.grid div[data-index="69"]:hover::after {
+    opacity: 1;
+}
+
+.grid div[data-index="71"]:hover::after {
+    content: '저는 느낌표 하나로 전투력이 상승해요.';
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #000;
+    color: #fff;
+    font-family: 'Black Han Sans', sans-serif;
+    font-size: 24px;
+    padding: 12.5px 25px;
+    border-radius: 0;
+    white-space: nowrap;
+    z-index: 10;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+.grid div[data-index="71"]:hover::after {
+    opacity: 1;
+}
+
+.grid div[data-index="75"]:hover::after {
+    content: '저는 느낌표 하나로 전투력이 상승해요.';
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #000;
+    color: #fff;
+    font-family: 'Black Han Sans', sans-serif;
+    font-size: 24px;
+    padding: 12.5px 25px;
+    border-radius: 0;
+    white-space: nowrap;
+    z-index: 10;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+.grid div[data-index="75"]:hover::after {
+    opacity: 1;
+}
+
+.grid div[data-index="76"]:hover::after {
+    content: '좌우 빈 공간은 채워야 하는 강박이 있어요';
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #000;
+    color: #fff;
+    font-family: 'Black Han Sans', sans-serif;
+    font-size: 24px;
+    padding: 12.5px 25px;
+    border-radius: 0;
+    white-space: nowrap;
+    z-index: 10;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+.grid div[data-index="76"]:hover::after {
+    opacity: 1;
+}
+
+.grid div[data-index="80"]:hover::after {
+    content: '저는 자주 질문하는 척 주장해요';
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #000;
+    color: #fff;
+    font-family: 'Black Han Sans', sans-serif;
+    font-size: 24px;
+    padding: 12.5px 25px;
+    border-radius: 0;
+    white-space: nowrap;
+    z-index: 10;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+.grid div[data-index="80"]:hover::after {
+    opacity: 1;
+}
+
+.grid div[data-index="81"]:hover::after {
+    content: '가끔 귀찮을 땐 자세한 얘기는 전화로...';
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #000;
+    color: #fff;
+    font-family: 'Black Han Sans', sans-serif;
+    font-size: 24px;
+    padding: 12.5px 25px;
+    border-radius: 0;
+    white-space: nowrap;
+    z-index: 10;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+.grid div[data-index="81"]:hover::after {
+    opacity: 1;
+}
+
+.grid div[data-index="82"]:hover::after {
+    content: '저는 느낌표 하나로 전투력이 상승해요.';
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #000;
+    color: #fff;
+    font-family: 'Black Han Sans', sans-serif;
+    font-size: 24px;
+    padding: 12.5px 25px;
+    border-radius: 0;
+    white-space: nowrap;
+    z-index: 10;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+.grid div[data-index="82"]:hover::after {
+    opacity: 1;
+}
+.grid div[data-index="83"]:hover::after {
+    content: '저는 느낌표 하나로 전투력이 상승해요.';
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #000;
+    color: #fff;
+    font-family: 'Black Han Sans', sans-serif;
+    font-size: 24px;
+    padding: 12.5px 25px;
+    border-radius: 0;
+    white-space: nowrap;
+    z-index: 10;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+.grid div[data-index="83"]:hover::after {
+    opacity: 1;
+}
+.grid div[data-index="87"]:hover::after {
+    content: '저는 느낌표 하나로 전투력이 상승해요.';
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #000;
+    color: #fff;
+    font-family: 'Black Han Sans', sans-serif;
+    font-size: 24px;
+    padding: 12.5px 25px;
+    border-radius: 0;
+    white-space: nowrap;
+    z-index: 10;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+.grid div[data-index="87"]:hover::after {
+    opacity: 1;
+}
+.grid div[data-index="104"]:hover::after {
+    content: '저는 느낌표 하나로 전투력이 상승해요.';
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #000;
+    color: #fff;
+    font-family: 'Black Han Sans', sans-serif;
+    font-size: 24px;
+    padding: 12.5px 25px;
+    border-radius: 0;
+    white-space: nowrap;
+    z-index: 10;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+.grid div[data-index="104"]:hover::after {
+    opacity: 1;
+}
+.grid div[data-index="114"]:hover::after {
+    content: '저는 자주 질문하는 척 주장해요';
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #000;
+    color: #fff;
+    font-family: 'Black Han Sans', sans-serif;
+    font-size: 24px;
+    padding: 12.5px 25px;
+    border-radius: 0;
+    white-space: nowrap;
+    z-index: 10;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+.grid div[data-index="114"]:hover::after {
+    opacity: 1;
+}
+.grid div[data-index="117"]:hover::after {
+    content: '저는 느낌표 하나로 전투력이 상승해요.';
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #000;
+    color: #fff;
+    font-family: 'Black Han Sans', sans-serif;
+    font-size: 24px;
+    padding: 12.5px 25px;
+    border-radius: 0;
+    white-space: nowrap;
+    z-index: 10;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+.grid div[data-index="117"]:hover::after {
+    opacity: 1;
+}
+
+.grid div[data-index="119"]:hover::after {
+    content: '저는 자주 질문하는 척 주장해요';
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #000;
+    color: #fff;
+    font-family: 'Black Han Sans', sans-serif;
+    font-size: 24px;
+    padding: 12.5px 25px;
+    border-radius: 0;
+    white-space: nowrap;
+    z-index: 10;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+.grid div[data-index="119"]:hover::after {
+    opacity: 1;
+}
+
+.grid div[data-index="121"]:hover::after {
+    content: '저는 느낌표 하나로 전투력이 상승해요.';
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #000;
+    color: #fff;
+    font-family: 'Black Han Sans', sans-serif;
+    font-size: 24px;
+    padding: 12.5px 25px;
+    border-radius: 0;
+    white-space: nowrap;
+    z-index: 10;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+.grid div[data-index="121"]:hover::after {
+    opacity: 1;
+}
+
+.grid div[data-index="125"]:hover::after {
+    content: '제게 담기는 모두가 세상 선량한 얼굴이랍니다.';
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #000;
+    color: #fff;
+    font-family: 'Black Han Sans', sans-serif;
+    font-size: 24px;
+    padding: 12.5px 25px;
+    border-radius: 0;
+    white-space: nowrap;
+    z-index: 10;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+.grid div[data-index="125"]:hover::after {
+    opacity: 1;
+}
+
+.grid div[data-index="127"]:hover::after {
+    content: '저는 느낌표 하나로 전투력이 상승해요.';
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #000;
+    color: #fff;
+    font-family: 'Black Han Sans', sans-serif;
+    font-size: 24px;
+    padding: 12.5px 25px;
+    border-radius: 0;
+    white-space: nowrap;
+    z-index: 10;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+.grid div[data-index="127"]:hover::after {
+    opacity: 1;
+}
+
+.grid div[data-index="129"]:hover::after {
+    content: '좌우 빈 공간은 채워야 하는 강박이 있어요';
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #000;
+    color: #fff;
+    font-family: 'Black Han Sans', sans-serif;
+    font-size: 24px;
+    padding: 12.5px 25px;
+    border-radius: 0;
+    white-space: nowrap;
+    z-index: 10;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+.grid div[data-index="129"]:hover::after {
+    opacity: 1;
+}
+.grid div[data-index="130"]:hover::after {
+    content: '가끔 귀찮을 땐 자세한 얘기는 전화로...';
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #000;
+    color: #fff;
+    font-family: 'Black Han Sans', sans-serif;
+    font-size: 24px;
+    padding: 12.5px 25px;
+    border-radius: 0;
+    white-space: nowrap;
+    z-index: 10;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+.grid div[data-index="130"]:hover::after {
+    opacity: 1;
+}
+.grid div[data-index="131"]:hover::after {
+    content: '저는 자주 질문하는 척 주장해요';
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #000;
+    color: #fff;
+    font-family: 'Black Han Sans', sans-serif;
+    font-size: 24px;
+    padding: 12.5px 25px;
+    border-radius: 0;
+    white-space: nowrap;
+    z-index: 10;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+.grid div[data-index="131"]:hover::after {
+    opacity: 1;
+}
+.grid div[data-index="132"]:hover::after {
+    content: '좌우 빈 공간은 채워야 하는 강박이 있어요';
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #000;
+    color: #fff;
+    font-family: 'Black Han Sans', sans-serif;
+    font-size: 24px;
+    padding: 12.5px 25px;
+    border-radius: 0;
+    white-space: nowrap;
+    z-index: 10;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+.grid div[data-index="132"]:hover::after {
+    opacity: 1;
+}
+.grid div[data-index="139"]:hover::after {
+    content: '가끔 귀찮을 땐 자세한 얘기는 전화로...';
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #000;
+    color: #fff;
+    font-family: 'Black Han Sans', sans-serif;
+    font-size: 24px;
+    padding: 12.5px 25px;
+    border-radius: 0;
+    white-space: nowrap;
+    z-index: 10;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+.grid div[data-index="139"]:hover::after {
+    opacity: 1;
+}
+
+.grid div[data-index="146"]:hover::after {
+    content: '가끔 귀찮을 땐 자세한 얘기는 전화로...';
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #000;
+    color: #fff;
+    font-family: 'Black Han Sans', sans-serif;
+    font-size: 24px;
+    padding: 12.5px 25px;
+    border-radius: 0;
+    white-space: nowrap;
+    z-index: 10;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+.grid div[data-index="146"]:hover::after {
+    opacity: 1;
+}
+.grid div[data-index="147"]:hover::after {
+    content: '가끔 귀찮을 땐 자세한 얘기는 전화로...';
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #000;
+    color: #fff;
+    font-family: 'Black Han Sans', sans-serif;
+    font-size: 24px;
+    padding: 12.5px 25px;
+    border-radius: 0;
+    white-space: nowrap;
+    z-index: 10;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+.grid div[data-index="147"]:hover::after {
+    opacity: 1;
+}
+
+.grid div[data-index="152"]:hover::after {
+    content: '좌우 빈 공간은 채워야 하는 강박이 있어요';
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #000;
+    color: #fff;
+    font-family: 'Black Han Sans', sans-serif;
+    font-size: 24px;
+    padding: 12.5px 25px;
+    border-radius: 0;
+    white-space: nowrap;
+    z-index: 10;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+.grid div[data-index="152"]:hover::after {
+    opacity: 1;
+}
+
+.grid div[data-index="154"]:hover::after {
+    content: '제게 담기는 모두가 세상 선량한 얼굴이랍니다.';
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #000;
+    color: #fff;
+    font-family: 'Black Han Sans', sans-serif;
+    font-size: 24px;
+    padding: 12.5px 25px;
+    border-radius: 0;
+    white-space: nowrap;
+    z-index: 10;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+.grid div[data-index="154"]:hover::after {
+    opacity: 1;
+}
+
+.grid div[data-index="158"]:hover::after {
+    content: '저는 자주 질문하는 척 주장해요';
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #000;
+    color: #fff;
+    font-family: 'Black Han Sans', sans-serif;
+    font-size: 24px;
+    padding: 12.5px 25px;
+    border-radius: 0;
+    white-space: nowrap;
+    z-index: 10;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+.grid div[data-index="158"]:hover::after {
+    opacity: 1;
+}
+.grid div[data-index="160"]:hover::after {
+    content: '저는 느낌표 하나로 전투력이 상승해요.';
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #000;
+    color: #fff;
+    font-family: 'Black Han Sans', sans-serif;
+    font-size: 24px;
+    padding: 12.5px 25px;
+    border-radius: 0;
+    white-space: nowrap;
+    z-index: 10;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+.grid div[data-index="160"]:hover::after {
+    opacity: 1;
+}
