@@ -4,25 +4,27 @@ body, html {
     width: 100%;
     height: 100%;
     background-color: #000;
-    overflow: hidden;
+    overflow: hidden; /* 기본 스크롤 비활성화 */
     font-family: 'Black Han Sans', sans-serif;
 }
 
+/* 공통 오버레이 스타일 */
 .overlay {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.85); /* 85% 투명도의 검정색 오버레이 */
-    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.85); /* 검정 오퍼시티: 85% */
+    z-index: 1; /* 이미지 위 */
 }
 
+/* 이미지 컨테이너 */
 .image-container {
     position: absolute;
     top: 0;
     left: 0;
-    z-index: 2;
+    z-index: 2; /* 검정 배경 아래, 뜨는 이미지 */
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -33,12 +35,8 @@ body, html {
     height: 54px;
     margin: 0;
     opacity: 0;
-    transform: translateX(-100%); /* 왼쪽에서 오른쪽으로 슬라이드 인 효과를 위해 초기 위치 설정 */
-    animation: slideIn 0.2s forwards; /* 애니메이션 지속 시간을 0.2초로 설정 */
-}
-
-.image-container img:not(:first-child) {
-    margin-top: 0; /* 이미지 간의 간격 제거 */
+    transform: translateX(-100%); /* 슬라이드 효과를 위한 초기 위치 */
+    animation: slideIn 0.2s forwards; /* 0.2초 슬라이드 인 애니메이션 */
 }
 
 @keyframes slideIn {
@@ -48,19 +46,143 @@ body, html {
     }
 }
 
-.center-image {
-    position: fixed;
-    top: 42%;
-    left: -12%;
-    transform: translate(-50%, -50%);
-    z-index: 3;
-    opacity: 0;
-    width: 3%; /* 이미지 너비를 화면 너비의 5%로 설정 */
-    animation: fadeIn 8s forwards; /* 페이드인 애니메이션을 2초 동안 실행 */
+/* X 버튼 (데스크탑과 모바일 공통 스타일) */
+.close-button {
+    position: fixed; /* 화면에서 고정 위치 */
+    top: -20px; /* 상단 여백 증가 */
+    right: -400px; /* 오른쪽 여백 증가 */
+    width: 60px; /* 버튼 크기 */
+    height: 60px;
+    font-size: 30px; /* 글자 크기 */
+    color: white;
+    background-color: rgba(255, 255, 255, 0.3); /* 흰색 원, 오퍼시티 30% */
+    border: none;
+    border-radius: 50%; /* 둥근 버튼 */
+    z-index: 6; /* 모든 요소 위 */
+    display: flex;
+    justify-content: center;
+    align-items: center; /* X를 원의 정가운데 위치 */
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* 약간의 그림자 효과 */
+    opacity: 0; /* 초기 상태: 투명 */
+    animation: fadeInX 2s forwards; /* X표시 천천히 나타나는 애니메이션 */
 }
 
-@keyframes fadeIn {
+@keyframes fadeInX {
+    from {
+        opacity: 0;
+    }
     to {
         opacity: 1;
     }
 }
+
+
+
+/* 중앙 이미지 박스 */
+.center-box {
+    position: fixed;
+    top: 50%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+    z-index: 3; /* 가장 상단 */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.center-image img {
+    width: 150%; /* 모든 기준에서 절반 크기 */
+    animation: fadeIn 5s forwards; /* 천천히 나타나는 효과 */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* 모바일 스타일 */
+@media screen and (max-width: 430px) {
+    body, html {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden; /* 모든 스크롤 비활성화 */
+    }
+
+    .image-container img {
+        width: 100vw; /* 가로를 꽉 채움 */
+        height: 10vh; /* 세로 간격 없음 */
+        object-fit: cover;
+        z-index: 2; /* 이미지 레이어 설정 */
+    }
+
+    .overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.7); /* 검정 배경 오버레이 */
+        z-index: 3; /* 이미지 위에 위치 */
+    }
+
+    .center-box {
+        position: fixed;
+        top: 50%;
+        left: 1%;
+        transform: translate(-50%, -50%) scale(1.4); /* 크기 2배로 확대 */
+        z-index: 4; /* 가장 위에 위치 */
+    }
+
+    .center-image {
+        width: auto; /* 비율 유지 */
+        max-width: 100%; /* 너무 커지는 것 방지 */
+        max-height: 100%; /* 너무 커지는 것 방지 */
+        animation: fadeIn 3s forwards; /* 천천히 나타나는 효과 */
+        z-index: 5; /* 모든 요소 위에 위치 */
+    }
+
+    /* 모바일에서 X표시 하나만 나타나도록 수정 */
+    .close-button {
+        position: absolute;
+        top: -120px; /* 상단 여백 */
+        right: -50px; /* 오른쪽 여백 */
+        width: 30px; /* 버튼 크기 */
+        height: 30px;
+        font-size: 20px; /* 글자 크기 */
+        color: white;
+        background-color: rgba(0, 0, 0, 0.7); /* 닫기 버튼 */
+        border: none;
+        border-radius: 50%; /* 둥근 버튼 */
+        z-index: 6;
+        cursor: pointer;
+        opacity: 0; /* 초기 상태: 투명 */
+        animation: fadeInX 2s forwards; /* X표시 천천히 나타나는 애니메이션 */
+    }
+}
+
+@keyframes fadeInX {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* 애니메이션 */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+

@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     const imageContainer = document.querySelector('.image-container');
-    const imageIndices = [15, 37, 38, 43, 45, 46, 48, 50, 59, 69, 78, 80, 85, 89, 96, 98, 99, 100, 101, 102, 103, 114, 115, 116, 119, 123, 124, 131, 157, 158];
+    const imageIndices = [36, 37, 38, 43, 45, 46, 48, 49, 50, 69, 78, 80, 85, 89, 96, 98, 99, 100, 101, 102, 103, 114, 115, 116, 119, 123, 124, 131, 157, 158];
 
     imageIndices.forEach((index, i) => {
         setTimeout(() => {

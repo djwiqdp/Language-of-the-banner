@@ -11,8 +11,8 @@ body, html {
 
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(8, 1fr);
-    grid-template-rows: repeat(20, 1fr);
+    grid-template-columns: repeat(8, 1fr); /* 데스크톱: 8열 */
+    grid-template-rows: repeat(20, 1fr); /* 데스크톱: 20행 */
     width: 100vw;
     height: 100vh;
     position: relative;
@@ -34,3 +34,20 @@ body, html {
     background-color: rgba(0, 0, 0, 0.85); /* 70% opacity black overlay */
     pointer-events: none; /* Allows clicks to pass through */
 }
+
+/* 모바일 스타일 */
+@media screen and (max-width: 430px) {
+    .grid-container {
+        grid-template-columns: repeat(3, 1fr); /* 모바일: 3열 */
+        grid-template-rows: repeat(29, 1fr); /* 모바일: 29행 */
+        width: 100vw;
+        height: 100vh;
+    }
+
+    .grid-item {
+        width: calc(100vw / 3); /* 3열 너비 */
+        height: calc(100vh / 29); /* 29행 높이 */
+        background-size: 142.75px 32.12px; /* 이미지 크기 고정 */
+    }
+}
+
